@@ -42,17 +42,7 @@ jobs:
           echo "目标分支: ${{ env.BRANCH_NAME }}"
         # 获取当前分支的名称，并将其设置为环境变量 BRANCH_NAME
 
-      # step6: 安装 Ruby
-      - name: 安装 Ruby # 手动安装 Ruby
-        run: |
-          sudo apt-get update # 更新 apt 软件包列表
-          sudo apt-get install -y rbenv ruby-build # 安装 rbenv 和 ruby-build
-          ruby-build 3.1.4 /opt/hostedtoolcache/Ruby/3.1.4/x64 # 使用 ruby-build 构建 Ruby 3.1.4 并安装到工具缓存
-          touch /opt/hostedtoolcache/Ruby/3.1.4/x64.complete # 创建标记文件，表示安装完成
-          echo "Ruby 3.1.4 已安装到工具缓存。"
-        # 手动安装 Ruby，以便 workflow 可以使用 Ruby
-
-      # step7: 合并上游 master 分支到当前分支 (排除工作流文件)
+      # step6: 合并上游 master 分支到当前分支 (排除工作流文件)
       - name: 合并上游 master 分支到当前分支 (排除工作流文件)
         run: |
           set -e
@@ -61,14 +51,14 @@ jobs:
         if: ${{ env.BRANCH_NAME != 'master' && env.BRANCH_NAME != 'main' }}
         # 将上游仓库的 master 分支合并到当前分支，排除 workflow 文件
 
-      # step8: 重置工作流文件，避免推送
+      # step7: 重置工作流文件，避免推送
       - name: 重置工作流文件，避免推送
         run: |
           git checkout HEAD -- .github/workflows/
           echo "已重置工作流文件。"
         # 将 workflow 文件恢复到 HEAD 版本，避免 push 工作流更改
 
-      # step9: 推送更改
+      # step8: 推送更改
       - name: 推送更改
         run: |
           TARGET_BRANCH=${{ env.BRANCH_NAME }}

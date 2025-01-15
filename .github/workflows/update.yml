@@ -1,75 +1,91 @@
-name: 同步上游仓库 (每日)
+name: Sync Upstream Daily  2：00
 
 on:
   schedule:
-    - cron: '0 2 * * *'  # 每天 2:00 UTC 触发
-  workflow_dispatch:  # 允许手动触发
+    - cron: '0 2 * * *'
+  workflow_dispatch:
 
 jobs:
   sync:
     runs-on: ubuntu-latest
-
+    
     steps:
-      # step1: 检出当前仓库
-      - name: 检出当前仓库
+      - name: Checkout repository
         uses: actions/checkout@v3
-        # 使用 actions/checkout@v3 action 将当前仓库的代码检出到 runner
+        with:
+          fetch-depth: 0
 
-      # step2: 设置 Git 配置
-      - name: 设置 Git 配置
+      - name: Install tree
+        run: sudo apt-get install -y tree
+
+      - name: Sync with upstream
         run: |
+          # 配置 Git
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        # 配置 Git 用户名和邮箱，用于后续的 Git 操作
-
-      # step3: 添加远程仓库
-      - name: 添加远程仓库
-        run: git remote add upstream https://github.com/vbskycn/iptv.git
-        # 添加上游仓库作为名为 "upstream" 的远程仓库
-
-      # step4: 从上游仓库获取最新更改
-      - name: 从上游仓库获取最新更改
-        run: |
+          
+          # 显示同步前的文件结构
+          echo "同步前的文件结构："
+          tree -a -I '.git'
+          
+          # 设置上游仓库
+          UPSTREAM_REPO="https://github.com/vbskycn/iptv.git"
+          git remote add upstream $UPSTREAM_REPO || true
+          echo "已添加上游仓库: $UPSTREAM_REPO"
+          
+          # 获取上游更新
           git fetch upstream
-          echo "已获取上游更改。"
-        # 从上游仓库获取最新的更改
-
-      # step5: 确定目标分支
-      - name: 确定目标分支
-        id: vars
-        run: |
-          echo "BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)" >> $GITHUB_ENV
-          echo "目标分支: ${{ env.BRANCH_NAME }}"
-        # 获取当前分支的名称，并将其设置为环境变量 BRANCH_NAME
-
-      # step6: 合并上游 master 分支到当前分支 (排除工作流文件)
-      - name: 合并上游 master 分支到当前分支 (排除工作流文件)
-        run: |
-          set -e
-          git merge -X theirs --strategy=recursive --allow-unrelated-histories upstream/master -- . ':!**/.github/workflows/*'
-          echo "已将上游 master 分支合并到 ${{ env.BRANCH_NAME }} (排除工作流文件)"
-        if: ${{ env.BRANCH_NAME != 'master' && env.BRANCH_NAME != 'main' }}
-        # 将上游仓库的 master 分支合并到当前分支，排除 workflow 文件
-
-      # step7: 重置工作流文件，避免推送
-      - name: 重置工作流文件，避免推送
-        run: |
-          git checkout HEAD -- .github/workflows/
-          echo "已重置工作流文件。"
-        # 将 workflow 文件恢复到 HEAD 版本，避免 push 工作流更改
-
-      # step8: 推送更改
-      - name: 推送更改
-        run: |
-          TARGET_BRANCH=${{ env.BRANCH_NAME }}
-          if [[ "$TARGET_BRANCH" == "master" ]]; then
-            git push origin master
-            echo "已推送更改到 master 分支。"
-          elif [[ "$TARGET_BRANCH" == "main" ]]; then
-            git push origin main
-            echo "已推送更改到 main 分支。"
+          echo "已获取上游更新"
+          
+          # 检测上游默认分支
+          if git ls-remote --heads upstream main | grep -q main; then
+            DEFAULT_BRANCH="main"
+            echo "检测到上游默认分支为: main"
           else
-            echo "跳过推送: 当前分支不是 master 或 main 分支。"
+            DEFAULT_BRANCH="master"
+            echo "检测到上游默认分支为: master"
           fi
-        if: ${{ env.BRANCH_NAME != 'master' && env.BRANCH_NAME != 'main' }}
-        # 将更改推送到远程仓库
+          
+          # 备份当前的 .github/workflows 目录
+          mkdir -p /tmp/workflows_backup
+          cp -r .github/workflows/* /tmp/workflows_backup/ 2>/dev/null || true
+          
+          # 清理除了 .git 和 .github/workflows 之外的所有文件
+          find . -mindepth 1 -not -path './.git*' -delete
+          
+          # 检出上游文件，但排除 .github/workflows
+          git checkout upstream/$DEFAULT_BRANCH -- .
+          
+          # 恢复原来的工作流文件
+          mkdir -p .github/workflows
+          cp -r /tmp/workflows_backup/* .github/workflows/ 2>/dev/null || true
+          rm -rf /tmp/workflows_backup
+          
+          # 显示同步后的文件结构
+          echo "同步后的文件结构："
+          tree -a -I '.git'
+          
+          # 显示更改的文件列表
+          echo "更新的文件列表："
+          git status --porcelain
+          
+          # 添加更改（排除工作流文件）
+          git add -A
+          git reset .github/workflows
+          
+          # 提交更改
+          git commit -m "chore: sync with upstream (excluding workflows)" || true
+          echo "已提交更改"
+          
+          # 推送更改
+          git push origin HEAD
+          echo "已推送更改"
+
+      - name: Sync status
+        if: always()
+        run: |
+          if [ $? -eq 0 ]; then
+            echo "✅ 同步成功完成"
+          else
+            echo "❌ 同步失败"
+          fi

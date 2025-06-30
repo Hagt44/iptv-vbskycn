@@ -4,6 +4,7 @@ title: 最新IPTV直播源|每日更新|免费电视直播源|Github开源项目
 description: 最新免费开源的IPTV电视直播源,支持IPv4/IPv6双栈访问,每6小时自动更新。收录国内外数千个高清直播频道,包括央视、卫视、港澳台、海外频道。完全免费无广告,提供M3U/TXT格式,支持EPG节目单及台标,可用于电视盒子、手机、电脑等设备。
 keywords: IPTV,直播源,直播电视,电视直播,CCTV,全套卫视,全套央视,IPv6直播源,免费直播源,m3u8直播源,港澳台,海外,国内,直播电视app,live.izbds.com,live.izbds.top
 permalink: /
+hide_edgeone: true
 ---
 
 <h2 align="center">✯ 这是一个国内可直连的iptv直播源分享项目 ✯</h2>
@@ -33,7 +34,7 @@ permalink: /
 
 ### 📡 自动扫描直播源 IPTV4
 
-部署在服务器上的程序自动扫描而来，<!-- UPDATE_TIME_IPTV4 -->本次更新时间: 2025-06-29 06:37:48<!-- END_UPDATE_TIME_IPTV4 -->
+部署在服务器上的程序自动扫描而来，<!-- UPDATE_TIME_IPTV4 -->本次更新时间: 2025-06-30 06:29:41<!-- END_UPDATE_TIME_IPTV4 -->
 
 <table>
   <colgroup>
@@ -72,7 +73,7 @@ https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv
 
 ### 📡 自动扫描直播源 IPTV6
 
-部署在服务器上的程序自动扫描而来，<!-- UPDATE_TIME_IPTV6 -->本次更新时间: 2025-06-29 06:37:48<!-- END_UPDATE_TIME_IPTV6 -->
+部署在服务器上的程序自动扫描而来，<!-- UPDATE_TIME_IPTV6 -->本次更新时间: 2025-06-30 06:29:41<!-- END_UPDATE_TIME_IPTV6 -->
 
 *有ipv6环境的强烈推荐这个列表，高速稳定*
 
@@ -188,7 +189,9 @@ https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv
 
 [![Star History Chart](https://api.star-history.com/svg?repos=vbskycn/iptv&type=Date)](https://star-history.com/#vbskycn/iptv&Date)
 
-[本项目的CDN加速和安全防护由腾讯EdgeOne赞助](https://edgeone.ai/zh?from=github)
+<!-- edgeone_start -->
+[本项目的CDN加速和安全防护由腾讯EdgeOne赞助](https://edgeone.ai/?from=github)
 
 ![](https://edgeone.ai/media/34fe3a45-492d-4ea4-ae5d-ea1087ca7b4b.png)
+<!-- edgeone_end -->
 

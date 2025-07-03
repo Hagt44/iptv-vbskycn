@@ -34,7 +34,7 @@ hide_edgeone: true
 
 ### 📡 自动扫描直播源 IPTV4
 
-部署在服务器上的程序自动扫描而来，<!-- UPDATE_TIME_IPTV4 -->本次更新时间: 2025-07-02 06:45:40<!-- END_UPDATE_TIME_IPTV4 -->
+部署在服务器上的程序自动扫描而来，<!-- UPDATE_TIME_IPTV4 -->本次更新时间: 2025-07-03 06:35:18<!-- END_UPDATE_TIME_IPTV4 -->
 
 <table>
   <colgroup>
@@ -73,7 +73,7 @@ https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv
 
 ### 📡 自动扫描直播源 IPTV6
 
-部署在服务器上的程序自动扫描而来，<!-- UPDATE_TIME_IPTV6 -->本次更新时间: 2025-07-02 06:45:40<!-- END_UPDATE_TIME_IPTV6 -->
+部署在服务器上的程序自动扫描而来，<!-- UPDATE_TIME_IPTV6 -->本次更新时间: 2025-07-03 06:35:18<!-- END_UPDATE_TIME_IPTV6 -->
 
 *有ipv6环境的强烈推荐这个列表，高速稳定*
 
@@ -190,8 +190,13 @@ https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv
 [![Star History Chart](https://api.star-history.com/svg?repos=vbskycn/iptv&type=Date)](https://star-history.com/#vbskycn/iptv&Date)
 
 <!-- edgeone_start -->
-[本项目的CDN加速和安全防护由腾讯EdgeOne赞助](https://edgeone.ai/?from=github)
-
-![](https://edgeone.ai/media/34fe3a45-492d-4ea4-ae5d-ea1087ca7b4b.png)
+<a href="https://edgeone.ai/?from=github/vbskycn/iptv"
+   title="本项目的CDN加速和安全防护由腾讯EdgeOne赞助"
+   target="_blank"
+   rel="noopener noreferrer">
+  <img src="https://edgeone.ai/media/34fe3a45-492d-4ea4-ae5d-ea1087ca7b4b.png"
+       alt="腾讯EdgeOne Logo"
+  />
+</a>
 <!-- edgeone_end -->
 

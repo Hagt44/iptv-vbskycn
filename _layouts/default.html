@@ -19,7 +19,9 @@
     <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
     <meta name="twitter:title" content="{{ page.title | default: site.title }}">
     <meta name="twitter:description" content="{{ page.description | default: site.description }}">
-    
+    <!-- Google Fonts 加载优化 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>{{ page.title | default: site.title }}</title>
 
 {% seo %}
@@ -69,5 +71,8 @@
     </div>
 
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    <!-- 51.la 统计代码移至页面底部 -->
+    <script async charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    <script>LA.init({id:"24HGI6jBpBm7xvgT",ck:"24HGI6jBpBm7xvgT"})</script>
   </body>
 </html> 

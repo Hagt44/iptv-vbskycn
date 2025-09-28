@@ -4,7 +4,6 @@ title: 最新IPTV直播源|每日更新直播源|免费电视直播源|Github开
 description: 本项目免费提供最新开源的IPTV直播源,每6小时自动更新。收录国内外数千个高清直播频道源,包括央视、卫视等频道。完全免费无广告,提供M3U/TXT格式,支持IPv4/IPv6双栈访问,支持EPG节目单及台标,可用于所有苹果、安卓4.0+系统的电视盒子、手机、和任何电脑等设备。
 keywords: IPTV,直播源,IPTV直播源,直播电视,电视直播,CCTV,全套卫视,全套央视,iptv,iptv直播源,ipv4直播源,IPv6直播源,免费直播源,m3u8直播源,国内,直播电视app
 permalink: /
-hide_edgeone: true
 ---
 
 
@@ -41,7 +40,7 @@ hide_edgeone: true
 
 <p><strong>IPTV4直播源</strong>由部署在服务器上的程序自动扫描验证，确保<strong>直播源</strong>的时效性和稳定性。</p>
 
-请使用国内站访问:[https://zbds.org/](https://zbds.org/)  <!-- UPDATE_TIME_IPTV4 -->本次更新时间: 2025-09-27 06:25:14<!-- END_UPDATE_TIME_IPTV4 -->
+请使用国内站访问:[https://zbds.org/](https://zbds.org/)  <!-- UPDATE_TIME_IPTV4 -->本次更新时间: 2025-09-28 06:25:01<!-- END_UPDATE_TIME_IPTV4 -->
 
 <table>
   <colgroup>
@@ -82,7 +81,7 @@ https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv
 
 <p><strong>IPTV6直播源</strong>专为IPv6网络优化，由部署在服务器上的程序自动扫描验证，确保<strong>直播源</strong>的时效和稳定</p>
 
-请使用国内站访问:[https://zbds.org/](https://zbds.org/)  <!-- UPDATE_TIME_IPTV6 -->本次更新时间: 2025-09-27 06:25:14<!-- END_UPDATE_TIME_IPTV6 -->
+请使用国内站访问:[https://zbds.org/](https://zbds.org/)  <!-- UPDATE_TIME_IPTV6 -->本次更新时间: 2025-09-28 06:25:01<!-- END_UPDATE_TIME_IPTV6 -->
 
 **近期由于不可力抗原因，大部分ipv6源都关门了，大玩家各玩各的。造成网友们不能一网通吃，请大家静待花开吧！！如有开门的大玩家，本仓库第一时间更新上来给大家分享**
 
@@ -201,16 +200,4 @@ https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv
 <h2>📊 Star History</h2>
 
 [![Star History Chart](https://api.star-history.com/svg?repos=vbskycn/iptv&type=Date)](https://star-history.com/#vbskycn/iptv&Date)
-
-<!-- edgeone_start -->
-<a href="https://edgeone.ai/?from=github/vbskycn/iptv"
-   title="本项目的CDN加速和安全防护由腾讯EdgeOne赞助"
-   target="_blank"
-   rel="noopener noreferrer">
-  <img src="https://edgeone.ai/media/34fe3a45-492d-4ea4-ae5d-ea1087ca7b4b.png"
-       alt="腾讯EdgeOne CDN加速服务"
-       loading="lazy"
-  />
-</a>
-<!-- edgeone_end -->
 

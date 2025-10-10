@@ -31,7 +31,7 @@ permalink: /
 
 <p><strong>IPTV4直播源</strong>由部署在服务器上的程序自动扫描验证，确保<strong>直播源</strong>的时效性和稳定性。</p>
 
-请使用国内站访问:[https://zbds.org/](https://zbds.org/)  <!-- UPDATE_TIME_IPTV4 -->本次更新时间: 2025-10-09 06:24:56<!-- END_UPDATE_TIME_IPTV4 -->
+请使用国内站访问:[https://live.icnwe.com/](https://live.icnwe.com/)  <!-- UPDATE_TIME_IPTV4 -->本次更新时间: 2025-10-10 08:39:05<!-- END_UPDATE_TIME_IPTV4 -->
 
 <table>
   <colgroup>
@@ -46,13 +46,13 @@ permalink: /
   </tr>
   <tr>
     <td>TXT 格式直播源</td>
-    <td><a href="https://zbds.org/tv/iptv4.txt">https://zbds.org/tv/iptv4.txt</a></td>
-    <td><button class="button" onclick="copyToClipboard('https://zbds.org/tv/iptv4.txt')">快速复制</button></td>
+    <td><a href="https://live.icnwe.com/tv/iptv4.txt">https://live.icnwe.com/tv/iptv4.txt</a></td>
+    <td><button class="button" onclick="copyToClipboard('https://live.icnwe.com/tv/iptv4.txt')">快速复制</button></td>
   </tr>
   <tr>
     <td>M3U 格式直播源（已带台标和EPG）</td>
-    <td><a href="https://zbds.org/tv/iptv4.m3u">https://zbds.org/tv/iptv4.m3u</a></td>
-    <td><button class="button" onclick="copyToClipboard('https://zbds.org/tv/iptv4.m3u')">快速复制</button></td>
+    <td><a href="https://live.icnwe.com/tv/iptv4.m3u">https://live.icnwe.com/tv/iptv4.m3u</a></td>
+    <td><button class="button" onclick="copyToClipboard('https://live.icnwe.com/tv/iptv4.m3u')">快速复制</button></td>
   </tr>
 </table>
 *如果你打不开github域名，请使用加速地址访问，加速地址也失效了？那就在找一个*
@@ -72,7 +72,7 @@ https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv
 
 <p><strong>IPTV6直播源</strong>专为IPv6网络优化，由部署在服务器上的程序自动扫描验证，确保<strong>直播源</strong>的时效和稳定</p>
 
-请使用国内站访问:[https://zbds.org/](https://zbds.org/)  <!-- UPDATE_TIME_IPTV6 -->本次更新时间: 2025-10-09 06:24:56<!-- END_UPDATE_TIME_IPTV6 -->
+请使用国内站访问:[https://live.icnwe.com/](https://live.icnwe.com/)  <!-- UPDATE_TIME_IPTV6 -->本次更新时间: 2025-10-10 08:39:05<!-- END_UPDATE_TIME_IPTV6 -->
 
 **近期由于不可力抗原因，大部分ipv6源都关门了，大玩家各玩各的。造成网友们不能一网通吃，请大家静待花开吧！！如有开门的大玩家，本仓库第一时间更新上来给大家分享**
 
@@ -89,13 +89,13 @@ https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv
   </tr>
   <tr>
     <td>TXT 格式直播源</td>
-    <td><a href="https://zbds.org/tv/iptv6.txt">https://zbds.org/tv/iptv6.txt</a></td>
-    <td><button class="button" onclick="copyToClipboard('https://zbds.org/tv/iptv6.txt')">快速复制</button></td>
+    <td><a href="https://live.icnwe.com/tv/iptv6.txt">https://live.icnwe.com/tv/iptv6.txt</a></td>
+    <td><button class="button" onclick="copyToClipboard('https://live.icnwe.com/tv/iptv6.txt')">快速复制</button></td>
   </tr>
   <tr>
     <td>M3U 格式直播源（已带台标和EPG）</td>
-    <td><a href="https://zbds.org/tv/iptv6.m3u">https://zbds.org/tv/iptv6.m3u</a></td>
-    <td><button class="button" onclick="copyToClipboard('https://zbds.org/tv/iptv6.m3u')">快速复制</button></td>
+    <td><a href="https://live.icnwe.com/tv/iptv6.m3u">https://live.icnwe.com/tv/iptv6.m3u</a></td>
+    <td><button class="button" onclick="copyToClipboard('https://live.icnwe.com/tv/iptv6.m3u')">快速复制</button></td>
   </tr>
 </table>
 
@@ -115,7 +115,7 @@ https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv
 
 <h2>💽DEMO</h2>
 
-<p><img src="assets/demo.png" alt="IPTV直播源演示截图 - 展示直播源列表和播放界面" title="IPTV直播源演示" loading="lazy" decoding="async" /></p>
+<p><img src="assets/demo.webp" alt="IPTV直播源演示截图 - 展示直播源列表和播放界面" title="IPTV直播源演示" loading="lazy" decoding="async" /></p>
 
 
 
@@ -127,7 +127,7 @@ https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv
 
 ### 直播源开源站点地址
 
-- [https://zbds.org/](https://zbds.org/)
+- [https://live.icnwe.com/](https://live.icnwe.com/)
 
 
 
